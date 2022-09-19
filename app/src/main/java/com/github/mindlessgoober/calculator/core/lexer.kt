@@ -6,7 +6,11 @@ import com.github.mindlessgoober.calculator.sealedClasses.Token
 
 fun lexer(valResult: String): List<Token> {
     val tokenList = mutableListOf<Token>()
-    for (token in valResult.toBigDecimal().toPlainString()) {
+    if (valResult.contains("E")) {
+        return tokenList
+    }
+
+    for (token in valResult) {
         when (token.toString()) {
             Point.symbol -> tokenList.add(Point)
             Digit.Zero.symbol -> tokenList.add(Digit.Zero)
