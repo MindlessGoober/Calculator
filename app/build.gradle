@@ -4,6 +4,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('/home/mayank/Documents/Google Play Key/KeyStore')
+            storePassword 'D = b^2-4ac'
+            keyAlias 'Key'
+            keyPassword 'D = b^2-4ac'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
@@ -17,6 +25,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {
