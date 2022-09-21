@@ -49,7 +49,7 @@ fun Double.divide(that: Double): Double {
         return if (this == that) Double.POSITIVE_INFINITY else Double.NEGATIVE_INFINITY
     }
 
-    return this.toBigDecimal().divide(that.toBigDecimal(), 100, RoundingMode.HALF_EVEN).toDouble()
+    return this.toBigDecimal().divide(that.toBigDecimal(), 16, RoundingMode.HALF_EVEN).toDouble()
 }
 
 fun String.toDoubleSafe(): Double {
