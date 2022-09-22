@@ -20,9 +20,9 @@ fun Display(expression: List<Token>, modifier: Modifier = Modifier) = Column(
     verticalArrangement = Arrangement.Bottom
 ) {
     TextDisplay(
-        text = expression.joinToString(separator = "") { it.symbol },
-        modifier = Modifier.weight(1f)
+        text = expression.joinToString(separator = "") { it.symbol }, modifier = Modifier.weight(1f)
     )
+
     TextDisplay(
         text = Parser(expression = expression).evaluate(),
         modifier = Modifier.weight(1f),

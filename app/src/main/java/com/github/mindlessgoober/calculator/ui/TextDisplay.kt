@@ -25,7 +25,6 @@ fun TextDisplay(text: String, modifier: Modifier = Modifier, toReverseScroll: Bo
             modifier = Modifier
                 .fillMaxSize()
                 .horizontalScroll(
-                    state = rememberScrollState(),
-                    reverseScrolling = toReverseScroll
+                    state = rememberScrollState(), reverseScrolling = toReverseScroll
                 ))
     }

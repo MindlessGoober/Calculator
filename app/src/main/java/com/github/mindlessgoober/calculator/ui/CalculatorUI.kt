@@ -14,8 +14,7 @@ import com.github.mindlessgoober.calculator.core.CalculatorViewModel
 fun CalculatorUI(calculatorViewModel: CalculatorViewModel = viewModel()) = Column(
     modifier = Modifier
         .padding(all = 8.dp)
-        .fillMaxSize(),
-    verticalArrangement = Arrangement.Bottom
+        .fillMaxSize(), verticalArrangement = Arrangement.Bottom
 ) {
     Display(expression = calculatorViewModel.expression, modifier = Modifier.weight(weight = 1f))
     ButtonGrid(onClick = calculatorViewModel::onAction)
